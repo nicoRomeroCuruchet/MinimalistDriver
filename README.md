@@ -60,17 +60,17 @@ This implies that a module needs to undergo certain procedural steps for seamles
        device_destroy(my_class, num);
        class_destroy(my_class);
 
-5 . What our module is missing are the operations that will implement the interface accessed by its users. This is where the file_operations structure we mentioned earlier comes into play:
+5. What our module is missing are the operations that will implement the interface accessed by its users. This is where the file_operations structure we mentioned earlier comes into play:
 
-      struct file_operations {
-         struct module *owner;
-         ...
-         ssize_t (*read) (struct file *, char __user *, size_t, loff_t *);
-         ssize_t (*write) (struct file *, const char __user *, size_t, loff_t *);
-         ssize_t (*open) (struct inode *, struct file *);
-         ssize_t (*release) (struct inode *, struct file *);
-         ...
-     }
+       struct file_operations {
+          struct module *owner;
+          ...
+          ssize_t (*read) (struct file *, char __user *, size_t, loff_t *);
+          ssize_t (*write) (struct file *, const char __user *, size_t, loff_t *);
+          ssize_t (*open) (struct inode *, struct file *);
+          ssize_t (*release) (struct inode *, struct file *);
+          ...
+      }
 
 # First toy driver: dev/null:
 Our first driver will mimic the functionality of */dev/null** is a special device file in Unix-like operating systems. It is commonly referred to as the *null device*. In Unix terminology, it represents a file that discards all data written to it and reports that there is no data when read. Essentially, any data written to **/dev/null** is silently discarded and reading always returns an end-of-file (EOF) condition. The code for this driver is located in *src/null*
