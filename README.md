@@ -80,7 +80,9 @@ Our first driver will mimic the functionality of */dev/null** is a special devic
 
 * Setup
 
-      cd src/null
+      mkdir toy_drivers
+      git clone 
+      cd src/
       make  # compile my_null.c
       insmo
 
