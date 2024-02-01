@@ -36,6 +36,7 @@ This implies that a module needs to undergo certain procedural steps for seamles
 
         void cdev_init(struct cdev *cdev, struct file_operations *fops);
 
-The first parameter is a structure representing the device. The second structure, whose type is defined in <linux/fs.h>, allows us to define the operations forming the driver's interface; we'll revisit this shortly. We need to define both structures as static at the beginning of our module.
+  The first parameter is a structure representing the device. The second structure, whose type is defined in <linux/fs.h>, allows us to define the operations forming the driver's interface; we'll revisit this shortly. We need to define both 
+  structures as static at the beginning of our module.
   
 
