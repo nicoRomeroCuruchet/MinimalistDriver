@@ -61,8 +61,7 @@ This implies that a module needs to undergo certain procedural steps for seamles
        class_destroy(my_class);
 
 # First toy driver: dev/null:
-
-**/dev/null** is a special device file in Unix-like operating systems. It is commonly referred to as the *null device*. In Unix terminology, it represents a file that discards all data written to it and reports that there is no data when read. Essentially, any data written to **/dev/null** is silently discarded and reading always returns an end-of-file (EOF) condition.
+Our first driver will mimic the functionality of */dev/null** is a special device file in Unix-like operating systems. It is commonly referred to as the *null device*. In Unix terminology, it represents a file that discards all data written to it and reports that there is no data when read. Essentially, any data written to **/dev/null** is silently discarded and reading always returns an end-of-file (EOF) condition.
 
 # Setup
 
