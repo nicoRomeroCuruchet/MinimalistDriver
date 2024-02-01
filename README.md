@@ -51,7 +51,7 @@ This implies that a module needs to undergo certain procedural steps for seamles
        my_class = class_create(THIS_MODULE, DEVICE_NAME);
        device_create(mi_class, NULL, num, NULL, DEVICE_NAME);
 
-where DEVICE_NAME is the name by which the device will appear in the file system, and num is the major.
+  where DEVICE_NAME is the name by which the device will appear in the file system, and num is the major.
 
 4. To deactivate the module, we must release these numbers by calling:
 
