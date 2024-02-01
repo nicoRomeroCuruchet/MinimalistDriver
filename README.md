@@ -51,7 +51,7 @@ To deactivate the module, we must release these numbers by calling:
        void unregister_chrdev_region(dev_t num, unsigned int count);
        void cdev_del(struct cdev *dev);
        
-3. Create the corresponding nodes in the file system. For that, we should **#include <linux/device.h>**, define a static variable static struct class *my_class, and then, during the module initialization, execute:
+3. Create the corresponding nodes in the file system. For that, we should **#include <linux/device.h>**, define a static variable static struct class ***my_class**, and then, during the module initialization, execute:
 
        my_class = class_create(THIS_MODULE, DEVICE_NAME);
        device_create(mi_class, NULL, num, NULL, DEVICE_NAME);
