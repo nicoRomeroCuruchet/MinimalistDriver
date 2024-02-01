@@ -9,4 +9,4 @@ A driver is a specialized software component that facilitates communication betw
 
 # Prepare a driver
 
-For a driver to be useful, users must access it. In Linux, this is done through the file system: devices (physical or virtual) appear as files in the /dev directory. If we run ls /dev -l, we can see something like:
+For a driver to be useful, users must access it. In Linux, this is done through the file system: devices (physical or virtual) appear as files in the **/dev** directory. If we run **ls /dev -l**, we can see something like:
