@@ -36,7 +36,7 @@ This implies that a module needs to undergo certain procedural steps for seamles
 
         void cdev_init(struct cdev *cdev, struct file_operations *fops);
 
-The first parameter is a structure representing the device. The second structure, whose type is defined in **<linux/fs.h>**, allows us to define the operations forming the driver's interface.
+   The first parameter is a structure representing the device. The second structure, whose type is defined in **<linux/fs.h>**, allows us to define the operations forming the driver's interface.
 
 2. Obtaining a major and a minor. It's advisable to request the kernel to dynamically allocate the major, which can be done using:
 
