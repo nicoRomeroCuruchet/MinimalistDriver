@@ -32,7 +32,7 @@ In addition, devices have a pair of associated numbers:
 
 This implies that a module needs to undergo certain procedural steps for seamless integration into the system:
 
-Device initialization, particularly on programming char devices. **#include <linux/cdev.h>** and call the function accordingly.
+1. Device initialization, particularly on programming char devices. **#include <linux/cdev.h>** and call the function accordingly.
 
         void cdev_init(struct cdev *cdev, struct file_operations *fops);
 
