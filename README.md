@@ -29,3 +29,10 @@ The first character of each line represents the file type:
 In addition, devices have a pair of associated numbers:
 * **major**: associated with a specific driver (first number after the group).
 * **minor**: identifies a specific device the driver manages (second number after the group).
+
+This implies that a module needs to undergo certain procedural steps for seamless integration into the system:
+
+Device initialization, particularly on programming char devices. Include <linux/cdev.h> and call the function accordingly.
+
+        void cdev_init(struct cdev *cdev, struct file_operations *fops);
+
