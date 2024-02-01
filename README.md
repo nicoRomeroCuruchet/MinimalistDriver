@@ -60,5 +60,6 @@ This implies that a module needs to undergo certain procedural steps for seamles
        device_destroy(my_class, num);
        class_destroy(my_class);
 
+# Setup
 
 
