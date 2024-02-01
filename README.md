@@ -41,3 +41,5 @@ The first parameter is a structure representing the device. The second structure
 2. Obtaining a major and a minor. It's advisable to request the kernel to dynamically allocate the major, which can be done using:
 
        int alloc_chrdev_region(dev_t *num, unsigned int firstminor, unsigned int count, char *name);
+
+The parameter **num** corresponds to the major, which will be returned after executing the function. The parameters **firstminor** and **count** can be set to 0 and 1, respectively, making the minor 0. **name** corresponds to a name for the device. Then, we need to assign the numbers to the device we previously initialized through.
