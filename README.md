@@ -75,16 +75,16 @@ This implies that a module needs to undergo certain procedural steps for seamles
    Each of its fields contains a pointer to the function that will be executed when certain actions are performed on the file from user mode. For example, the four detailed correspond to the *read, write, open, and close* operations. If some of the pointers are left as *NULL*, they will be associated with default operations.
 
 
-# First toy driver: dev/null:
+# First simple driver: dev/null:
 Our first driver will mimic the functionality of */dev/null** is a special device file in Unix-like operating systems. It is commonly referred to as the *null device*. In Unix terminology, it represents a file that discards all data written to it and reports that there is no data when read. Essentially, any data written to **/dev/null** is silently discarded and reading always returns an end-of-file (EOF) condition. The code for this driver is located in *src/null*
 
 * Setup
 
-      mkdir toy_drivers
-      git clone 
+      mkdir linux_drivers
+      git clone https://github.com/nicoRomeroCuruchet/MinimalistDriver.git
       cd src/
-      make  # compile my_null.c
-      insmo
+      make                  # compile my_null driver
+      insmod my_null.ko     # insert a module into the Linux Kernel
 
 
 
