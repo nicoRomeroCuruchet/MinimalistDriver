@@ -42,7 +42,7 @@ This implies that a module needs to undergo certain procedural steps for seamles
 
        int alloc_chrdev_region(dev_t *num, unsigned int firstminor, unsigned int count, char *name);
 
-The parameter **num** corresponds to the major, which will be returned after executing the function. The parameters **firstminor** and **count** can be set to 0 and 1, respectively, making the minor 0. **name** corresponds to a name for the device. Then, we need to assign the numbers to the device we previously initialized through:
+   The parameter **num** corresponds to the major, which will be returned after executing the function. The parameters **firstminor** and **count** can be set to 0 and 1, respectively, making the minor 0. **name** corresponds to a name for the device. Then, we need to assign the numbers to the device we previously initialized through:
 
        int cdev_add(struct cdev *dev, dev_t num, unsigned int count);
 
