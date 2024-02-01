@@ -72,7 +72,7 @@ This implies that a module needs to undergo certain procedural steps for seamles
           ...
        }
 
-   Each of its fields contains a pointer to the function that will be executed when certain actions are performed on the file from user mode. For example, the four detailed correspond to the read, write, open, and close operations. If some of the pointers are left as NULL, they will be associated with default operations."
+   Each of its fields contains a pointer to the function that will be executed when certain actions are performed on the file from user mode. For example, the four detailed correspond to the *read, write, open, and close* operations. If some of the pointers are left as *NULL*, they will be associated with default operations.
 
 
 # First toy driver: dev/null:
