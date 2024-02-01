@@ -60,6 +60,12 @@ This implies that a module needs to undergo certain procedural steps for seamles
        device_destroy(my_class, num);
        class_destroy(my_class);
 
+# The null driver:
+
+**/dev/null** is a special device file in Unix-like operating systems. It is commonly referred to as the *null device*. In Unix terminology, it represents a file that discards all data written to it and reports that there is no data when read. Essentially, any data written to **/dev/null** is silently discarded and reading always returns an end-of-file (EOF) condition.
+
 # Setup
+
+
 
 
