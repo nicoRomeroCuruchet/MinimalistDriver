@@ -19,3 +19,13 @@ For a driver to be useful, users must access it. In Linux, this is done through 
     brw-rw---- 1 root disk 8, 0 2010-10-08 20:00 sda
     brw-rw---- 1 root disk 8, 1 2010-10-08 20:00 sda1
     ...
+
+The first character of each line represents the file type:
+
+* **l** is a symlink (symbolic link).
+* **c** is a char device.
+* **b** is a block device.
+  
+In addition, devices have a pair of associated numbers:
+* **major**: associated with a specific driver (first number after the group).
+* **minor**: identifies a specific device the driver manages (second number after the group).
